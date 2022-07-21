@@ -22,7 +22,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 
 
-<button class="accordion">Day 1 &#9679; What is Data Science? </button>
+<button class="accordion">Day 1 &#9679; Data Science -- Basics and Principles  </button>
 <div class="panel">
 
 | Time          | Topic                              | Links |
@@ -39,7 +39,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 
 
-<button class="accordion">Day 2 &#9679; Lab </button>
+<button class="accordion">Day 2 &#9679; Lab: Introduction to R </button>
 <div class="panel">
 
 | Time          | Topic                              | Links |
@@ -76,7 +76,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 
 
-<button class="accordion">Day 4 &#9679; Lab </button>
+<button class="accordion">Day 4 &#9679; Lab: Advanced R </button>
 <div class="panel">
 
 | Time          | Topic                              | Links |
@@ -92,7 +92,7 @@ knitr::opts_chunk$set(echo = FALSE)
 	
 
 
-<button class="accordion">Day 5 &#9679; Relationships </button>
+<button class="accordion">Day 5 &#9679; Statistical Modeling </button>
 <div class="panel">
 
 | Time          | Topic                              | Links |
@@ -106,8 +106,10 @@ knitr::opts_chunk$set(echo = FALSE)
 			
 	
 			
-	
 
+<button class="accordion">Day 6-10 &#9679; Capstone Project </button>
+
+	
 	
 	
 	
