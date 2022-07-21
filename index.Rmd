@@ -8,7 +8,7 @@ knitr::include_graphics("img/ICS-SummerAcademy-Logo.png")
 ```
 
 <!--comment-->
-This two-week camp will explore the foundations of data science. 
+This two-week camp (sponsored by the School of ICS at UCI) will explore the foundations of data science. 
 The students will learn about data science methods and concepts via hands on projects. In particular, they become familiar with methods associated with data collection, data processing, data summarization and visualization, and statistical modeling approaches for prediction. Moreover, statistical inference techniques for testing scientific hypotheses are discussed. Lastly, students learn about statistical thinking for decision making under uncertainty. 
 Students will apply the concepts communicated through the lectures by analyzing real data, using the statistical programming language R. Lecture notes will be provided. Through teamwork and interactive learning, students will become involved with the processes related to scientific investigation and inquiry, with applications in biology and medical sciences, among others. 
 By the end of the program, students will work on a capstone project based on a real-life scientific problem and will present their findings to a broader audience. 

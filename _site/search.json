@@ -4,29 +4,29 @@
       "path": "index.html",
       "title": "Data Analytics Theory & Application (DATA)",
       "author": [],
-      "contents": "\n\n\n\n\nThis two-week camp will explore the foundations of data science. The\nstudents will learn about data science methods and concepts via hands on\nprojects. In particular, they become familiar with methods associated\nwith data collection, data processing, data summarization and\nvisualization, and statistical modeling approaches for prediction.\nMoreover, statistical inference techniques for testing scientific\nhypotheses are discussed. Lastly, students learn about statistical\nthinking for decision making under uncertainty. Students will apply the\nconcepts communicated through the lectures by analyzing real data, using\nthe statistical programming language R. Lecture notes will be provided.\nThrough teamwork and interactive learning, students will become involved\nwith the processes related to scientific investigation and inquiry, with\napplications in biology and medical sciences, among others. By the end\nof the program, students will work on a capstone project based on a\nreal-life scientific problem and will present their findings to a\nbroader audience. Through the Donald Bren School of Information and\nComputer Sciences, DATA students will: Engage in hands-on analytics\nprojects, involving real life scientific data; Learn how to formulate\nscientific questions and utilize statistical thought process to provide\npractical solutions to those problems; Interact and engage with\nuniversity faculty and college students and visit research labs in the\nSchool’s three departments; Explore career pathways in data science and\nrelated fields; Work in teams while emphasizing the essential skills\nrequired for scientific research, including creativity, communication,\ncollaboration, and critical thinking; Projects will emphasize Science,\nTechnology, Engineering and Mathematics (STEM) concepts and be\ncorrelated with Common Core Standards and the Framework for Next\nGeneration Science Standards.\n\n\n\n",
-      "last_modified": "2022-07-20T19:32:44-07:00"
+      "contents": "\n\n\n\n\nThis two-week camp (sponsored by the School of ICS at UCI) will\nexplore the foundations of data science. The students will learn about\ndata science methods and concepts via hands on projects. In particular,\nthey become familiar with methods associated with data collection, data\nprocessing, data summarization and visualization, and statistical\nmodeling approaches for prediction. Moreover, statistical inference\ntechniques for testing scientific hypotheses are discussed. Lastly,\nstudents learn about statistical thinking for decision making under\nuncertainty. Students will apply the concepts communicated through the\nlectures by analyzing real data, using the statistical programming\nlanguage R. Lecture notes will be provided. Through teamwork and\ninteractive learning, students will become involved with the processes\nrelated to scientific investigation and inquiry, with applications in\nbiology and medical sciences, among others. By the end of the program,\nstudents will work on a capstone project based on a real-life scientific\nproblem and will present their findings to a broader audience. Through\nthe Donald Bren School of Information and Computer Sciences, DATA\nstudents will: Engage in hands-on analytics projects, involving real\nlife scientific data; Learn how to formulate scientific questions and\nutilize statistical thought process to provide practical solutions to\nthose problems; Interact and engage with university faculty and college\nstudents and visit research labs in the School’s three departments;\nExplore career pathways in data science and related fields; Work in\nteams while emphasizing the essential skills required for scientific\nresearch, including creativity, communication, collaboration, and\ncritical thinking; Projects will emphasize Science, Technology,\nEngineering and Mathematics (STEM) concepts and be correlated with\nCommon Core Standards and the Framework for Next Generation Science\nStandards.\n\n\n\n",
+      "last_modified": "2022-07-20T21:23:40-07:00"
     },
     {
       "path": "people.html",
       "title": "People",
       "author": [],
       "contents": "\nFaculty\n\n\n\nDr. Babak Shahbaba\nDr. Sam Behseta\nDr. Jessica Jaynes\n\n\n\n",
-      "last_modified": "2022-07-20T19:32:45-07:00"
+      "last_modified": "2022-07-20T21:23:41-07:00"
     },
     {
       "path": "resources.html",
       "title": "Resources",
       "author": [],
       "contents": "\n\nData\nScience Major at UC Irvine\n\n\nThis is one example of a data science major at the college level.\n\n\n\n\n",
-      "last_modified": "2022-07-20T19:32:45-07:00"
+      "last_modified": "2022-07-20T21:23:41-07:00"
     },
     {
       "path": "schedule.html",
       "title": "Daily Schedule",
       "author": [],
       "contents": "\n\nBefore Starting the Program\n\n\nTo-Do\n\nDownload and Install R\nLink Video\nDownload and Install RStudio\nLink Video\nSetup RStudio\nVideo\nDownload packages\nFile Video\nAlzheimer’s Disease\nLink\n\n\n\n\n\nvar acc = document.getElementsByClassName(\"accordion\");\nvar i;\n\nfor (i = 0; i < acc.length; i++) {\n  acc[i].addEventListener(\"click\", function() {\n    /* Toggle between adding and removing the \"active\" class,\n    to highlight the button that controls the panel */\n    this.classList.toggle(\"active\");\n\n    /* Toggle between hiding and showing the active panel */\n    var panel = this.nextElementSibling;\n    if (panel.style.display === \"block\") {\n      panel.style.display = \"none\";\n    } else {\n      panel.style.display = \"block\";\n    }\n  });\n}\n\n\n\n\n",
-      "last_modified": "2022-07-20T19:32:46-07:00"
+      "last_modified": "2022-07-20T21:23:43-07:00"
     }
   ],
   "collections": []
