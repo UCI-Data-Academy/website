@@ -1,0 +1,25 @@
+name: "DSBS"
+title: "Data Science in Biomedical Sciences"
+theme: theme.css
+description: |
+  COSMOS UCI Data Science in Biomedical Sciences
+output_dir: "_site"
+navbar:
+  search: false
+  logo:
+    #image: img/cosmos-uci-dshs.png
+    #href: https://uci-dshs.netlify.app/
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "People"
+      href: people.html
+    - text: "Schedule"
+      href: schedule.html
+    - text: "Resources"
+      href: resources.html
+    - icon: far fa-comments
+      href: https://canvas.eee.uci.edu/courses/37434
+    - icon: fab fa-github
+      href: https://github.com/COSMOS-DataScience/website
+output: distill::distill_article
