@@ -27,11 +27,11 @@ knitr::opts_chunk$set(echo = FALSE)
 
 | Time          | Topic                              | Links |
 |---------------|------------------------------------|-------|
-| 09:00 - 09:30 | Welcome                            |[Slides](https://uci-data-academy.github.io/slides/01a-welcome.html)|
-| 09:35 - 10:30 | Introduction to data science    |[Slides](https://uci-data-academy.github.io/slides/01b-intro-data-science.html)   |
+| 9:00 - 9:30 | Welcome                            |[Slides](https://uci-data-academy.github.io/slides/01a-welcome.html)|
+| 9:35 - 10:30 | Introduction to data science    |[Slides](https://uci-data-academy.github.io/slides/01b-intro-data-science.html)|
 | 10:45 - 12:00 | Describing data    |[Slides](https://uci-data-academy.github.io/slides/01c-describe-data.html)   |
-| 10:45 - 12:00 | Introduction to the capstone project |                [Slides](https://uci-data-academy.github.io/slides/01d-intro-capstone-project.pdf)    |
-| 10:45 - 12:00 | Working on the capstone project         | [Slides](https://uci-data-academy.github.io/slides/01e-capstone-eda.pdf)   [File](https://uci-data-academy.github.io/slides/01e-capstone-eda-code.R) |
+| 2:00 - 2:45 | Introduction to the capstone project |                [Slides](https://uci-data-academy.github.io/slides/01d-intro-capstone-project.pdf)    |
+| 3:00 - 4:00 | Working on the capstone project         | [Slides](https://uci-data-academy.github.io/slides/01e-capstone-eda.pdf)   [File](https://uci-data-academy.github.io/slides/01e-capstone-eda-code.R) |
 
 </div>
 		
@@ -44,7 +44,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 | Time          | Topic                              | Links |
 |---------------|------------------------------------|-------|
-| 09:00 - 10:00 | Introduction to R                            |[Slides](https://uci-data-academy.github.io/slides/Lab-01a-intro-r-schetzsle.html) |
+| 9:00 - 10:00 | Introduction to R                            |[Slides](https://uci-data-academy.github.io/slides/Lab-01a-intro-r-schetzsle.html) |
 | 10:15 - 10:45 | R packages |[Slides](https://uci-data-academy.github.io/slides/Lab-01b-R-packages-schetzsle.html)       |
 | 10:45 - 12:00 | Importing data               |[Slides](https://uci-data-academy.github.io/slides/Lab-01c-import-data-schetzsle.html)  |
 | 1:00 - 1:45 | Tidyverse              | [Slides](https://uci-data-academy.github.io/slides/Lab-01d-intro-tidyverse-moslemi.html)     |
@@ -54,6 +54,62 @@ knitr::opts_chunk$set(echo = FALSE)
 	
 	
 
+	
+
+
+
+<button class="accordion">Day 3 &#9679; Probability and Inference </button>
+<div class="panel">
+
+| Time          | Topic                              | Links |
+|---------------|------------------------------------|-------|
+| 9:00 - 10:00 | Introduction to probability |[Slides](https://uci-data-academy.github.io/slides/02a-intro-prob.html)|
+| 10:15 - 11:00 | Estimating  |[Slides](https://uci-data-academy.github.io/slides/02b-estimation.html)|
+| 11:15 - 12:00 | Hypothesis testing |[Slides](https://uci-data-academy.github.io/slides/02c-hypothesis.html)|
+| 2:00 - 3:00 | Probability through simulations| [Slides](https://uci-data-academy.github.io/slides/02d-intro-prob-simulation.pdf) [File](https://uci-data-academy.github.io/slides/02d-intro-prob-simulation-code.R)|
+| 3:15 - 4:00 | Inference examples from the capstone project| [Slides](https://uci-data-academy.github.io/slides/02e-capstone-estimation.pdf) [File](https://uci-data-academy.github.io/slides/02e-capstone-estimation-code.R)|
+
+</div>
+		
+	
+
+
+
+
+<button class="accordion">Day 4 &#9679; Lab </button>
+<div class="panel">
+
+| Time          | Topic                              | Links |
+|---------------|------------------------------------|-------|
+| 9:00 - 10:15 | R Markdown                        |[Slides](https://uci-data-academy.github.io/slides/Lab-02a-intro-rmarkdown-moslemi.html) |
+| 10:45 - 12:00 | Practicing R Markdown            | |
+| 1:00 - 2:00 | Data visualization in R |[Slides](https://uci-data-academy.github.io/slides/Lab-02b-visualize-data-schetzsle.html)       |
+| 2:15 - 3:00 | Practicing data visualization              | 
+|
+
+</div>
+		
+	
+
+
+<button class="accordion">Day 5 &#9679; Relationships </button>
+<div class="panel">
+
+| Time          | Topic                              | Links |
+|---------------|------------------------------------|-------|
+| 9:00 - 10:15 | Exploring and examining relationships |[Slides](https://uci-data-academy.github.io/slides/03a-relationship.html)|
+| 10:30 - 12:00 | Linear regression |[Slides](https://uci-data-academy.github.io/slides/03b-regression.html)|
+| 1:30 - 2:15 | Logistic regression |[Slides](https://uci-data-academy.github.io/slides/03c-logit.html)|
+| 2:30 - 3:00 | Relationship examples from the capstone project |[Slides](https://uci-data-academy.github.io/slides/03d-capstone-relationship.pdf) [File](https://uci-data-academy.github.io/slides/03d-capstone-relationship-code.R)|
+| 3:15 - 4:00 | Regression examples from the capstone project| [Slides](https://uci-data-academy.github.io/slides/03e-capstone-regression.pdf) [File](https://uci-data-academy.github.io/slides/03e-capstone-regression-code.R)|
+</div>
+			
+	
+			
+	
+
+	
+	
 	
 	
 ```{r}
