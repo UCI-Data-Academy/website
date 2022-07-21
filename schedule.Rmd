@@ -20,6 +20,40 @@ knitr::opts_chunk$set(echo = FALSE)
 </div>
 
 
+
+
+<button class="accordion">Day 1 &#9679; What is Data Science? </button>
+<div class="panel">
+
+| Time          | Topic                              | Links |
+|---------------|------------------------------------|-------|
+| 09:00 - 09:30 | Welcome                            |[Slides](https://uci-data-academy.github.io/slides/01a-welcome.html)|
+| 09:35 - 10:30 | Introduction to data science    |[Slides](https://uci-data-academy.github.io/slides/01b-intro-data-science.html)   |
+| 10:45 - 12:00 | Describing data    |[Slides](https://uci-data-academy.github.io/slides/01c-describe-data.html)   |
+| 10:45 - 12:00 | Introduction to the capstone project |                [Slides](https://uci-data-academy.github.io/slides/01d-intro-capstone-project.pdf)    |
+| 10:45 - 12:00 | Working on the capstone project         | [Slides](https://uci-data-academy.github.io/slides/01e-capstone-eda.pdf)   [File](https://uci-data-academy.github.io/slides/01e-capstone-eda-code.R) |
+
+</div>
+		
+
+
+
+
+<button class="accordion">Day 2 &#9679; Lab </button>
+<div class="panel">
+
+| Time          | Topic                              | Links |
+|---------------|------------------------------------|-------|
+| 09:00 - 10:00 | Introduction to R                            |[Slides](https://uci-data-academy.github.io/slides/Lab-01a-intro-r-schetzsle.html) |
+| 10:15 - 10:45 | R packages |[Slides](https://uci-data-academy.github.io/slides/Lab-01b-R-packages-schetzsle.html)       |
+| 10:45 - 12:00 | Importing data               |[Slides](https://uci-data-academy.github.io/slides/Lab-01c-import-data-schetzsle.html)  |
+| 1:00 - 1:45 | Tidyverse              | [Slides](https://uci-data-academy.github.io/slides/Lab-01d-intro-tidyverse-moslemi.html)     |
+| 2:00 - 3:00 | Data wrangling              | [Slides](https://uci-data-academy.github.io/slides/Lab-01e-data-wrangling-moslemi.html)     |
+
+</div>
+	
+	
+
 	
 	
 ```{r}
