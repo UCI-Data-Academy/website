@@ -1,14 +1,14 @@
-name: "DSBS"
-title: "Data Science in Biomedical Sciences"
+name: "DATA"
+title: "Data Analytics Theory & Application"
 theme: theme.css
 description: |
-  COSMOS UCI Data Science in Biomedical Sciences
+  ICS Summer Academy
 output_dir: "_site"
 navbar:
   search: false
   logo:
-    #image: img/cosmos-uci-dshs.png
-    #href: https://uci-dshs.netlify.app/
+    #image: img/ICS-SummerAcademy-Logo.png
+    #href: https://uci-data-academy.netlify.app/
   right:
     - text: "Home"
       href: index.html
@@ -18,8 +18,6 @@ navbar:
       href: schedule.html
     - text: "Resources"
       href: resources.html
-    - icon: far fa-comments
-      href: https://canvas.eee.uci.edu/courses/37434
     - icon: fab fa-github
-      href: https://github.com/COSMOS-DataScience/website
+      href: https://github.com/UCI-Data-Academy/website
 output: distill::distill_article
