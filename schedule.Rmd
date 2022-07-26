@@ -43,7 +43,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 | Time          | Topic                              | Links |
 |---------------|------------------------------------|-------|
-| 9:00 - 10:00 | R programming  | |
+| 9:00 - 10:00 | More on R programming |[Slides](https://uci-data-academy.github.io/slides/Lab-01a-for-loops-schetzsle.html) |
 | 10:15 - 10:45 | R packages |[Slides](https://uci-data-academy.github.io/slides/Lab-01b-R-packages-schetzsle.html)       |
 | 10:45 - 12:00 | Importing data               |[Slides](https://uci-data-academy.github.io/slides/Lab-01c-import-data-schetzsle.html)  |
 | 1:00 - 1:45 | Tidyverse              | [Slides](https://uci-data-academy.github.io/slides/Lab-01d-intro-tidyverse-moslemi.html)     |
