@@ -82,7 +82,7 @@ knitr::opts_chunk$set(echo = FALSE)
 | Time          | Topic                              | Links |
 |---------------|------------------------------------|-------|
 | 9:00 - 10:15 | R Markdown                        |[Slides](https://uci-data-academy.github.io/slides/Lab-02a-intro-rmarkdown-moslemi.html) |
-| 10:45 - 12:00 | Practicing R Markdown            | |
+| 10:45 - 12:00 | Scatterplots            |[Slides](https://uci-data-academy.github.io/slides/Lab-2a-scatterplots-Moslemi.html)
 | 1:00 - 2:00 | Data visualization in R |[Slides](https://uci-data-academy.github.io/slides/Lab-02b-visualize-data-schetzsle.html)       |
 | 2:15 - 3:00 | Practicing data visualization              | 
 |
