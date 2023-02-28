@@ -1599,6 +1599,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
+<<<<<<< HEAD
         const citeChild = $(this).children()[0]
         // Do not process if @xyz has been used without escaping and without bibliography activated
         // https://github.com/rstudio/distill/issues/466
@@ -1606,6 +1607,10 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
         if (citeChild.nodeName == "D-FOOTNOTE") {
           var fn = citeChild
+=======
+        if ($(this).children()[0].nodeName == "D-FOOTNOTE") {
+          var fn = $(this).children()[0]
+>>>>>>> b7ade63b5395007b2f302ade9bf04c57bd8896dd
           $(this).html(fn.shadowRoot.querySelector("sup"))
           $(this).id = fn.id
           fn.remove()
@@ -2364,8 +2369,9 @@ Day 4 ● Lab: Advanced R
 </tr>
 <tr class="even">
 <td>10:45 - 12:00</td>
-<td>Practicing R Markdown</td>
-<td></td>
+<td>Scatterplots</td>
+<td><a
+href="https://uci-data-academy.github.io/slides/Lab-2a-scatterplots-Moslemi.html">Slides</a></td>
 </tr>
 <tr class="odd">
 <td>1:00 - 2:00</td>
