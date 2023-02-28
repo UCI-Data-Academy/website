@@ -50,16 +50,17 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  { color: #00769e; background-color: #f1f3f5; }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span { color: #00769e; } /* Normal */
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { } /* Attribute */
+code span.at { color: #657422; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007ba5; } /* ControlFlow */
+code span.cf { color: #00769e; } /* ControlFlow */
 code span.ch { color: #20794d; } /* Char */
 code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #5e5e5e; } /* Comment */
@@ -73,9 +74,9 @@ code span.fl { color: #ad0000; } /* Float */
 code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #5e5e5e; } /* Information */
-code span.kw { color: #007ba5; } /* Keyword */
+code span.kw { color: #00769e; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
-code span.ot { color: #007ba5; } /* Other */
+code span.ot { color: #00769e; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
 code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
@@ -525,6 +526,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-article table.gt_table td,
   d-article table.gt_table th {
     border-bottom: none;
+    font-size: 100%;
   }
 
   .html-widget {
@@ -766,10 +768,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     position: relative;
     margin-bottom: 2.5em;
     margin-top: 1.5em;
-  }
-
-  .figure img {
-    width: 100%;
   }
 
   .figure .caption {
@@ -1601,9 +1599,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
+        const citeChild = $(this).children()[0]
+        // Do not process if @xyz has been used without escaping and without bibliography activated
+        // https://github.com/rstudio/distill/issues/466
+        if (citeChild === undefined) return true
+
+        if (citeChild.nodeName == "D-FOOTNOTE") {
+          var fn = citeChild
+          $(this).html(fn.shadowRoot.querySelector("sup"))
+          $(this).id = fn.id
+          fn.remove()
+        }
         var refs = $(this).attr('data-cites').split(" ");
         var refHtml = refs.map(function(ref) {
-          return "<p>" + $('#ref-' + ref).html() + "</p>";
+          // Could use CSS.escape too here, we insure backward compatibility in navigator
+          return "<p>" + $('div[id="ref-' + ref + '"]').html() + "</p>";
         }).join("\n");
         window.tippy(this, {
           allowHTML: true,
@@ -1615,6 +1625,31 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
           placement: 'bottom-start'
         });
       });
+
+      // fix footnotes in tables (#411)
+      // replacing broken distill.pub feature
+      $('table d-footnote').each(function() {
+        // we replace internal showAtNode methode which is triggered when hovering a footnote
+        this.hoverBox.showAtNode = function(node) {
+          // ported from https://github.com/distillpub/template/pull/105/files
+          calcOffset = function(elem) {
+              let x = elem.offsetLeft;
+              let y = elem.offsetTop;
+              // Traverse upwards until an `absolute` element is found or `elem`
+              // becomes null.
+              while (elem = elem.offsetParent && elem.style.position != 'absolute') {
+                  x += elem.offsetLeft;
+                  y += elem.offsetTop;
+              }
+
+              return { left: x, top: y };
+          }
+          // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop
+          const bbox = node.getBoundingClientRect();
+          const offset = calcOffset(node);
+          this.show([offset.left + bbox.width, offset.top + bbox.height]);
+        }
+      })
 
       // clear polling timer
       clearInterval(tid);
@@ -1714,6 +1749,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // mark non-body figures created by knitr chunks as 100% width
     $('.layout-chunk').each(function(i, val) {
       var figures = $(this).find('img, .html-widget');
+      // ignore leaflet img layers (#106)
+      figures = figures.filter(':not(img[class*="leaflet"])')
       if ($(this).attr('data-layout') !== "l-body") {
         figures.css('width', '100%');
       } else {
@@ -1736,7 +1773,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // get rid of index.html references in header
     if (window.location.protocol !== "file:") {
       $('.distill-site-header a[href]').each(function(i,val) {
-        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+        $(this).attr('href', $(this).attr('href').replace(/^index[.]html/, "./"));
       });
     }
 
@@ -2069,7 +2106,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     color: var(--hover-color, white);
   }</style>
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.18/header-attrs.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2146,8 +2183,7 @@ Before Starting the Program
 </tr>
 <tr class="even">
 <td>Download and Install RStudio</td>
-<td><a
-href="https://www.rstudio.com/products/rstudio/download/">Link</a></td>
+<td><a href="https://www.rstudio.com/products/rstudio/download/">Link</a></td>
 </tr>
 <tr class="odd">
 <td>Download packages</td>
@@ -2181,32 +2217,27 @@ Day 1 ● Data Science – Basics and Principles
 <tr class="odd">
 <td>9:00 - 9:30</td>
 <td>Welcome</td>
-<td><a
-href="https://uci-data-academy.github.io/slides/01a-welcome.html">Slides</a></td>
+<td><a href="https://uci-data-academy.github.io/slides/01a-welcome.html">Slides</a></td>
 </tr>
 <tr class="even">
 <td>9:35 - 10:30</td>
 <td>Introduction to data science</td>
-<td><a
-href="https://uci-data-academy.github.io/slides/01b-intro-data-science.html">Slides</a></td>
+<td><a href="https://uci-data-academy.github.io/slides/01b-intro-data-science.html">Slides</a></td>
 </tr>
 <tr class="odd">
 <td>10:45 - 12:00</td>
 <td>Describing data</td>
-<td><a
-href="https://uci-data-academy.github.io/slides/01c-describe-data.html">Slides</a></td>
+<td><a href="https://uci-data-academy.github.io/slides/01c-describe-data.html">Slides</a></td>
 </tr>
 <tr class="even">
 <td>2:00 - 2:45</td>
 <td>Introduction to the capstone project</td>
-<td><a
-href="https://uci-data-academy.github.io/slides/01d-intro-capstone-project.pdf">Slides</a></td>
+<td><a href="https://uci-data-academy.github.io/slides/01d-intro-capstone-project.pdf">Slides</a></td>
 </tr>
 <tr class="odd">
 <td>3:00 - 4:00</td>
 <td>Introduction to R</td>
-<td><a
-href="https://uci-data-academy.github.io/slides/Lab-01a-intro-r-schetzsle.html">Slides</a></td>
+<td><a href="https://uci-data-academy.github.io/slides/Lab-01a-intro-r-schetzsle.html">Slides</a></td>
 </tr>
 </tbody>
 </table>
@@ -2232,32 +2263,27 @@ Day 2 ● Lab: Introduction to R
 <tr class="odd">
 <td>9:00 - 10:00</td>
 <td>More on R programming</td>
-<td><a
-href="https://uci-data-academy.github.io/slides/Lab-01a-for-loops-schetzsle.html">Slides</a></td>
+<td><a href="https://uci-data-academy.github.io/slides/Lab-01a-for-loops-schetzsle.html">Slides</a></td>
 </tr>
 <tr class="even">
 <td>10:15 - 10:45</td>
 <td>R packages</td>
-<td><a
-href="https://uci-data-academy.github.io/slides/Lab-01b-R-packages-schetzsle.html">Slides</a></td>
+<td><a href="https://uci-data-academy.github.io/slides/Lab-01b-R-packages-schetzsle.html">Slides</a></td>
 </tr>
 <tr class="odd">
 <td>10:45 - 12:00</td>
 <td>Importing data</td>
-<td><a
-href="https://uci-data-academy.github.io/slides/Lab-01c-import-data-schetzsle.html">Slides</a></td>
+<td><a href="https://uci-data-academy.github.io/slides/Lab-01c-import-data-schetzsle.html">Slides</a></td>
 </tr>
 <tr class="even">
 <td>1:30 - 2:30</td>
 <td>Tidyverse</td>
-<td><a
-href="https://uci-data-academy.github.io/slides/Lab-01d-intro-tidyverse-moslemi.html">Slides</a></td>
+<td><a href="https://uci-data-academy.github.io/slides/Lab-01d-intro-tidyverse-moslemi.html">Slides</a></td>
 </tr>
 <tr class="odd">
 <td>2:30 - 4:00</td>
 <td>Data wrangling</td>
-<td><a
-href="https://uci-data-academy.github.io/slides/Lab-01e-data-wrangling-moslemi.html">Slides</a></td>
+<td><a href="https://uci-data-academy.github.io/slides/Lab-01e-data-wrangling-moslemi.html">Slides</a></td>
 </tr>
 </tbody>
 </table>
@@ -2283,44 +2309,32 @@ Day 3 ● Probability and Inference
 <tr class="odd">
 <td>9:00 - 10:00</td>
 <td>Introduction to probability</td>
-<td><a
-href="https://uci-data-academy.github.io/slides/02a-intro-prob.html">Slides</a></td>
+<td><a href="https://uci-data-academy.github.io/slides/02a-intro-prob.html">Slides</a></td>
 </tr>
 <tr class="even">
 <td>10:15 - 11:00</td>
 <td>Esimation</td>
-<td><a
-href="https://uci-data-academy.github.io/slides/02b-estimation.html">Slides</a></td>
+<td><a href="https://uci-data-academy.github.io/slides/02b-estimation.html">Slides</a></td>
 </tr>
 <tr class="odd">
 <td>11:15 - 12:00</td>
 <td>Hypothesis testing</td>
-<td><a
-href="https://uci-data-academy.github.io/slides/02c-hypothesis.html">Slides</a></td>
+<td><a href="https://uci-data-academy.github.io/slides/02c-hypothesis.html">Slides</a></td>
 </tr>
 <tr class="even">
 <td>2:00 - 2:30</td>
 <td>Exploring Alzheimer’s data using R</td>
-<td><a
-href="https://uci-data-academy.github.io/slides/01e-capstone-eda.pdf">Slides</a>
-<a
-href="https://uci-data-academy.github.io/slides/01e-capstone-eda-code.R">File</a></td>
+<td><a href="https://uci-data-academy.github.io/slides/01e-capstone-eda.pdf">Slides</a> <a href="https://uci-data-academy.github.io/slides/01e-capstone-eda-code.R">File</a></td>
 </tr>
 <tr class="odd">
 <td>2:30 - 3:00</td>
 <td>Probability through simulations</td>
-<td><a
-href="https://uci-data-academy.github.io/slides/02d-intro-prob-simulation.pdf">Slides</a>
-<a
-href="https://uci-data-academy.github.io/slides/02d-intro-prob-simulation-code.R">File</a></td>
+<td><a href="https://uci-data-academy.github.io/slides/02d-intro-prob-simulation.pdf">Slides</a> <a href="https://uci-data-academy.github.io/slides/02d-intro-prob-simulation-code.R">File</a></td>
 </tr>
 <tr class="even">
 <td>3:15 - 4:00</td>
 <td>Inference examples from the capstone project</td>
-<td><a
-href="https://uci-data-academy.github.io/slides/02e-capstone-estimation.pdf">Slides</a>
-<a
-href="https://uci-data-academy.github.io/slides/02e-capstone-estimation-code.R">File</a></td>
+<td><a href="https://uci-data-academy.github.io/slides/02e-capstone-estimation.pdf">Slides</a> <a href="https://uci-data-academy.github.io/slides/02e-capstone-estimation-code.R">File</a></td>
 </tr>
 </tbody>
 </table>
@@ -2346,8 +2360,7 @@ Day 4 ● Lab: Advanced R
 <tr class="odd">
 <td>9:00 - 10:15</td>
 <td>R Markdown</td>
-<td><a
-href="https://uci-data-academy.github.io/slides/Lab-02a-intro-rmarkdown-moslemi.html">Slides</a></td>
+<td><a href="https://uci-data-academy.github.io/slides/Lab-02a-intro-rmarkdown-moslemi.html">Slides</a></td>
 </tr>
 <tr class="even">
 <td>10:45 - 12:00</td>
@@ -2357,8 +2370,7 @@ href="https://uci-data-academy.github.io/slides/Lab-02a-intro-rmarkdown-moslemi.
 <tr class="odd">
 <td>1:00 - 2:00</td>
 <td>Data visualization in R</td>
-<td><a
-href="https://uci-data-academy.github.io/slides/Lab-02b-visualize-data-schetzsle.html">Slides</a></td>
+<td><a href="https://uci-data-academy.github.io/slides/Lab-02b-visualize-data-schetzsle.html">Slides</a></td>
 </tr>
 <tr class="even">
 <td>2:15 - 3:00</td>
@@ -2394,36 +2406,27 @@ Day 5 ● Statistical Modeling
 <tr class="odd">
 <td>9:00 - 10:15</td>
 <td>Exploring and examining relationships</td>
-<td><a
-href="https://uci-data-academy.github.io/slides/03a-relationship.html">Slides</a></td>
+<td><a href="https://uci-data-academy.github.io/slides/03a-relationship.html">Slides</a></td>
 </tr>
 <tr class="even">
 <td>10:30 - 12:00</td>
 <td>Linear regression</td>
-<td><a
-href="https://uci-data-academy.github.io/slides/03b-regression.html">Slides</a></td>
+<td><a href="https://uci-data-academy.github.io/slides/03b-regression.html">Slides</a></td>
 </tr>
 <tr class="odd">
 <td>1:30 - 2:15</td>
 <td>Logistic regression</td>
-<td><a
-href="https://uci-data-academy.github.io/slides/03c-logit.html">Slides</a></td>
+<td><a href="https://uci-data-academy.github.io/slides/03c-logit.html">Slides</a></td>
 </tr>
 <tr class="even">
 <td>2:30 - 3:00</td>
 <td>Relationship examples from the capstone project</td>
-<td><a
-href="https://uci-data-academy.github.io/slides/03d-capstone-relationship.pdf">Slides</a>
-<a
-href="https://uci-data-academy.github.io/slides/03d-capstone-relationship-code.R">File</a></td>
+<td><a href="https://uci-data-academy.github.io/slides/03d-capstone-relationship.pdf">Slides</a> <a href="https://uci-data-academy.github.io/slides/03d-capstone-relationship-code.R">File</a></td>
 </tr>
 <tr class="odd">
 <td>3:15 - 4:00</td>
 <td>Regression examples from the capstone project</td>
-<td><a
-href="https://uci-data-academy.github.io/slides/03e-capstone-regression.pdf">Slides</a>
-<a
-href="https://uci-data-academy.github.io/slides/03e-capstone-regression-code.R">File</a></td>
+<td><a href="https://uci-data-academy.github.io/slides/03e-capstone-regression.pdf">Slides</a> <a href="https://uci-data-academy.github.io/slides/03e-capstone-regression-code.R">File</a></td>
 </tr>
 </tbody>
 </table>
@@ -2457,8 +2460,7 @@ for (i = 0; i < acc.length; i++) {
 }
 </script>
 </div>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
