@@ -66,7 +66,7 @@ knitr::opts_chunk$set(echo = FALSE)
 | 10:15 - 11:00 | Exploring and examining relationships  |[Slides](https://uci-data-academy.github.io/slides/03b-relationship.html)|
 | 11:15 - 12:00 | Data wrangling |[Slides](https://uci-data-academy.github.io/slides/Lab-02b-data-wrangling.html)|
 | 2:30 - 3:30 | Data visualization in R |[Slides](https://uci-data-academy.github.io/slides/Lab-02b-visualize-data-schetzsle.html)       |
-
+| 2:30 - 3:30 | Data visualization for the AD dataset |[Slides](https://uci-data-academy.github.io/slides/Lab-06-exploring-AD-data.html)       |
 </div>
 		
 	
