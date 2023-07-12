@@ -65,8 +65,7 @@ knitr::opts_chunk$set(echo = FALSE)
 | 9:00 - 10:00 | Hypothesis testing |[Slides](https://uci-data-academy.github.io/slides/03a-hypothesis.html)|
 | 10:15 - 11:00 | Exploring and examining relationships  |[Slides](https://uci-data-academy.github.io/slides/03b-relationship.html)|
 | 11:15 - 12:00 | Data wrangling |[Slides](https://uci-data-academy.github.io/slides/Lab-02b-data-wrangling.html)|
-| 2:30 - 3:15 | Data visualization in R |[Slides](https://uci-data-academy.github.io/slides/Lab-02b-visualize-data-schetzsle.html)       |
-| 3:30 - 4:00 | Scatterplots  |[Slides](https://uci-data-academy.github.io/slides/Lab-2a-scatterplots-Moslemi.html) |
+| 2:30 - 3:30 | Data visualization in R |[Slides](https://uci-data-academy.github.io/slides/Lab-02b-visualize-data-schetzsle.html)       |
 
 </div>
 		
