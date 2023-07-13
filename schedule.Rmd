@@ -81,7 +81,7 @@ knitr::opts_chunk$set(echo = FALSE)
 | Time          | Topic                              | Links |
 |---------------|------------------------------------|-------|
 | 9:00 - 10:45 | Introduction to linear regression                        |[Slides](https://uci-data-academy.github.io/slides/04a-regression.html) |
-| 11:00 - 11:45 | Linear regression in R              | |
+| 11:00 - 11:45 | Linear regression in R              |[Slides](https://uci-data-academy.github.io/slides/Lab-07-Linear_regression.html) |
 | 1:30 - 2:15 | Data visualization with the Alzhiemer's dataset |[Slides](https://uci-data-academy.github.io/slides/Lab-06-exploring-AD-data.html)      |
 | 2:30 - 3:30 | Linear regression examples from capstone              |[Slides](https://uci-data-academy.github.io/slides/Lab-07-Linear_regression_AD.html) |
 </div>
