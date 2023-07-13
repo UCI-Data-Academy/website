@@ -64,9 +64,10 @@ knitr::opts_chunk$set(echo = FALSE)
 |---------------|------------------------------------|-------|
 | 9:00 - 10:00 | Hypothesis testing |[Slides](https://uci-data-academy.github.io/slides/03a-hypothesis.html)|
 | 10:15 - 11:00 | Exploring and examining relationships  |[Slides](https://uci-data-academy.github.io/slides/03b-relationship.html)|
-| 11:15 - 12:00 | Data wrangling |[Slides](https://uci-data-academy.github.io/slides/Lab-02b-data-wrangling.html)|
-| 2:30 - 3:30 | Data visualization in R |[Slides](https://uci-data-academy.github.io/slides/Lab-02b-visualize-data-schetzsle.html)       |
-| 2:30 - 3:30 | Data visualization for the AD dataset |[Slides](https://uci-data-academy.github.io/slides/Lab-06-exploring-AD-data.html)       |
+| 11:15 - 12:00 | Data wrangling |[Slides](https://uci-data-academy.github.io/slides/Lab-02b-data-wrangling.html) [Scratchwork](https://uci-data-academy.github.io/slides/TA_scratchwork/data_wrangling_scratchwork.R) |
+| 2:30 - 3:30 | Data visualization in R |[Slides](https://uci-data-academy.github.io/slides/Lab-02b-visualize-data-schetzsle.html)     |
+| 2:30 - 3:00 | Commonly used R functions |[Slides](https://uci-data-academy.github.io/slides/TA_scratchwork/Commonly_Used_R_Functions.html) |
+
 </div>
 		
 	
@@ -79,9 +80,10 @@ knitr::opts_chunk$set(echo = FALSE)
 
 | Time          | Topic                              | Links |
 |---------------|------------------------------------|-------|
-| 9:00 - 10:45 | Introduction to liear regression                        |[Slides](https://uci-data-academy.github.io/slides/04a-regression.html) |
-| 11:00 - 11:45 | Linear regression examples from capstone              | |
-| 11:00 - 11:45 | Linear regression examples from capstone              | |
+| 9:00 - 10:45 | Introduction to linear regression                        |[Slides](https://uci-data-academy.github.io/slides/04a-regression.html) |
+| 11:00 - 11:45 | Linear regression in R              | |
+| 1:30 - 2:15 | Data visualization with the Alzhiemer's dataset |[Slides](https://uci-data-academy.github.io/slides/Lab-06-exploring-AD-data.html)      |
+| 2:30 - 3:30 | Linear regression examples from capstone              | |
 </div>
 		
 	
