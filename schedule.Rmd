@@ -95,7 +95,7 @@ knitr::opts_chunk$set(echo = FALSE)
 | Time          | Topic                              | Links |
 |---------------|------------------------------------|-------|
 | 9:00 - 10:45 | Introduction to logistic regression |[Slides](https://uci-data-academy.github.io/slides/05a-logit.html)|
-| 11:00 - 11:45 | Logistic regression examples from capstone | |
+| 11:00 - 11:45 | Logistic regression examples from capstone | [Slides](https://uci-data-academy.github.io/slides/Lab-08-Logistic_regression_AD.html)|
 | 1:30 - 2:15 | Starting capstone projects | |
 </div>
 			
