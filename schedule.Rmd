@@ -110,7 +110,7 @@ Lasso Regression examples from AD dataset [Slides](https://uci-data-academy.gith
 
 
 
-<button class="accordion">Day 11 &#9679; K Nearest Neighbors </button>
+<button class="accordion">Day 11 &#9679; Machine Learning -- Intro and K Nearest Neighbors   </button>
 <div class="panel">
 
 | Time          | Topic                              | Links |
@@ -118,9 +118,17 @@ Lasso Regression examples from AD dataset [Slides](https://uci-data-academy.gith
 |9:00 - 9:45 | Introduction to Machine Learning | [Slides](https://uci-data-academy.github.io/slides/Machine_Learning_Slides/01-Introduction.pdf) [Handout](https://uci-data-academy.github.io/slides/Machine_Learning_Handouts/01-Intro.pdf) |
 |10:00 - 11:45 | K Nearest Neighbors Algorithm | [Slides](https://uci-data-academy.github.io/slides/Machine_Learning_Slides/02-NearestNeighborClassifiers.pdf) [Handout](https://uci-data-academy.github.io/slides/Machine_Learning_Handouts/02-NearestNeighbors.pdf)
 | 1:30 - 3:30 | K Nearest Neighbors Lab with Alzheimer's Data |[Slides](https://uci-data-academy.github.io/slides/Lab-10-KNN.html) [Scratchwork](https://uci-data-academy.github.io/slides/TA_scratchwork/KNN.R)|
-
-
 </div>
+
+
+
+<button class="accordion">Day 12 &#9679; Concept Learning   </button>
+<div class="panel">
+
+| Time          | Topic                              | Links |
+|---------------|------------------------------------|-------|
+|9:00 - 11:45 | Concept Learning | [Handout](https://uci-data-academy.github.io/slides/Machine_Learning_Handouts/03-ConceptLearning.pdf) |
+|1:30 - 3:45 | Concept Learning with Alzheimer's Data | |
 	
 	
 	
