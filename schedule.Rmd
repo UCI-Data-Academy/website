@@ -115,7 +115,9 @@ Lasso Regression examples from AD dataset [Slides](https://uci-data-academy.gith
 
 | Time          | Topic                              | Links |
 |---------------|------------------------------------|-------|
-| 1:30 - 3:30 | K Nearest Neighbors Lab with Alzheimer's Data |[Slides](https://uci-data-academy.github.io/slides/Lab-10-KNN.html)|
+|9:00 - 9:45 | Introduction to Machine Learning | [Slides](https://uci-data-academy.github.io/slides/Machine_Learning_Slides/01-Introduction.pdf) [Handout](https://uci-data-academy.github.io/slides/Machine_Learning_Handouts/01-Intro.pdf) |
+|10:00 - 11:45 | K Nearest Neighbors Algorithm | [Slides](https://uci-data-academy.github.io/slides/Machine_Learning_Slides/02-NearestNeighborClassifiers.pdf) [Handout](https://uci-data-academy.github.io/slides/Machine_Learning_Handouts/02-NearestNeighbors.pdf)
+| 1:30 - 3:30 | K Nearest Neighbors Lab with Alzheimer's Data |[Slides](https://uci-data-academy.github.io/slides/Lab-10-KNN.html) [Scratchwork](https://uci-data-academy.github.io/slides/TA_scratchwork/KNN.R)|
 
 
 </div>
