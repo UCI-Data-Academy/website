@@ -137,8 +137,22 @@ Lasso Regression examples from AD dataset [Slides](https://uci-data-academy.gith
 
 | Time          | Topic                              | Links |
 |---------------|------------------------------------|-------|
-|9:00 - 11:45 | Decision Trees | [Handout](https://uci-data-academy.github.io/slides/Machine_Learning_Handouts/04-DecisionTrees.pdf) |
+|9:00 - 11:45 | Decision Trees | [Slides](https://uci-data-academy.github.io/slides/Machine_Learning_Slides/04-DecisionTrees-Day3.pdf) [Handout](https://uci-data-academy.github.io/slides/Machine_Learning_Handouts/04-DecisionTrees.pdf) |
 |1:30 - 3:45 | Decision Trees with Alzheimer's Data |[Slides](https://uci-data-academy.github.io/slides/Lab-12-DecisionTrees.html) |
+</div>
+
+
+<button class="accordion">Day 14 &#9679; Random Forest and Naive Bayes Classifiers   </button>
+<div class="panel">
+
+| Time          | Topic                              | Links |
+|---------------|------------------------------------|-------|
+| 9:00 - 9:30 | Finish Decision Trees  | |
+| 9:30 - 9:50 | Bayes' Rule | |
+| 10:00 - 11:30 | Naive Bayes Classifiers | [Handout](https://uci-data-academy.github.io/slides/Machine_Learning_Handouts/05-NaiveBayesClassifiers.pdf) |
+| 1:30 - 2:30 | Random Forests with Alzheimer's Data| |
+| 2:45 - 3:45 | Naive Bayes Classifiers with Alzheimer's Data| |
+</div>
 	
 	
 	
