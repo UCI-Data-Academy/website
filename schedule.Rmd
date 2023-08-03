@@ -198,7 +198,7 @@ Lasso Regression examples from AD dataset [Slides](https://uci-data-academy.gith
 | Time          | Topic                              | Links |
 |---------------|------------------------------------|-------|
 | 9:00 - 11:30 | Search Methods | [Handout](https://uci-data-academy.github.io/slides/Machine_Learning_Handouts/10-Search.pdf)|
-| 1:30 - 2:00 | K-Means Clustering Examples with Alzheimer's Data | 
+| 1:30 - 2:00 | K-Means Clustering Examples with Alzheimer's Data | [Slides](https://uci-data-academy.github.io/slides/Lab-16-KMeansClustering.html)
 </div>
 	
 	
